@@ -1,17 +1,18 @@
 public enum RessourceType
 {
-    herb,
-    flower,
-    crystal,
-    fruit,
-    vegetable,
+    Herb,
+    Flower,
+    Crystal,
+    Fruit,
+    Vegetable,
+    Mushroom,
 }
 public enum Rarity
 {
-    common,
-    uncommon,
-    rare,
-    epic,
-    legendary,
-    mythic,
+    Common,
+    Uncommon,
+    Rare,
+    Epic,
+    Legendary,
+    Mythic,
 }

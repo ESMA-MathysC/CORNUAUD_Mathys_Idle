@@ -10,5 +10,6 @@ public class Ressource : ScriptableObject
     public int hp;
     public RessourceType type;
     public Rarity rarity;
+    public int lootAmount;
     public Sprite ressourceImage;
 }
