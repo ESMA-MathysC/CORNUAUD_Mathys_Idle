@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd8ee45e371bd14cb37be9454b49c52, type: 3}
   m_Name: Lava_Crystal
   m_EditorClassIdentifier: 
-  ressourceName: 
+  ressourceName: Lava Crystal
   hp: 10
   type: 2
   rarity: 4
