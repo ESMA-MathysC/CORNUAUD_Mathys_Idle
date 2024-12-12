@@ -9,7 +9,7 @@ public class UITransition : MonoBehaviour
 
     public void ToShop()
     {
-        anim.Play("UITransition");
+        anim.Play("UIToShop");
     }
 
     public void ToClicker()

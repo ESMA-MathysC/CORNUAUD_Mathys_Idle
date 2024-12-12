@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class RessourceReader : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
-    private int _currentHp;
+    public int _currentHp;
     public int _maxHp;
     [SerializeField]
-    private TextMeshProUGUI _hpText, _nameText, _typeText, _rarityText, _ressourceText;
+    public TextMeshProUGUI _hpText, _nameText, _typeText, _rarityText, _moneyText;
     [SerializeField]
     private Image _ressourceImage;
     [SerializeField]
-    private Image _hpImage;
+    public Image _hpImage;
 
     [SerializeField]
     private Ressource _currentRessource;
@@ -21,22 +21,20 @@ public class RessourceReader : MonoBehaviour
     [SerializeField]
     private Ressource[] _ressourceTable;
 
-    public int totalRessource = 0;
+    public int totalMoney = 0;
+
 
     void Start()
     {
         ReadRessource(_ressourceTable[Random.Range(0, _ressourceTable.Length)]);
     }
 
-    public void PlayerAttack()
+    void Update()
     {
-        _currentHp -= 1;
-        _hpText.text = _currentHp.ToString("000");
-        _hpImage.fillAmount = (float)_currentHp / (float)_maxHp;
-        if ( _currentHp <= 0)
+        if (_currentHp <= 0)
         {
-            totalRessource += _currentRessource.lootAmount; //adds the looting amount of the ressource to the player's money count
-            _ressourceText.text = totalRessource.ToString("000");
+            totalMoney += _currentRessource.lootAmount; //adds the looting amount of the ressource to the player's money count
+            _moneyText.text = totalMoney.ToString("000");
             ReadRessource(_ressourceTable[Random.Range(0, _ressourceTable.Length)]);
         }
     }
