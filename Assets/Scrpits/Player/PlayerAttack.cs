@@ -16,7 +16,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(hasWand2Upgrade == true)
         {
-            _critRoll = Random.Range(0, 4);
+            _critRoll = Random.Range(0, 5);
             if(_critRoll == 4)
             {
                 GameManager.Instance.enemy._currentHp -= clickDamage * critMultiplier;

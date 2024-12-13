@@ -27,6 +27,13 @@ public class ShopPrices : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _pricePotion3Text;
 
+    private void Start()
+    {
+        UpdatePriceWand1();
+        UpdatePriceWand2();
+    }
+
+
     public void UpdatePriceWand1()
     {
         _priceWand1Text.text = GameManager.Instance.wandUpgrades.wand1Cost.ToString("0000");

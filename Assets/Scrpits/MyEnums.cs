@@ -1,4 +1,4 @@
-public enum RessourceType
+public enum EnemyType
 {
     Herb,
     Flower,

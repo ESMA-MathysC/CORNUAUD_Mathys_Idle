@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public EnemySpawner enemy;
     public WandUpgrades wandUpgrades;
     public ShopPrices shopPrices;
+    public MoneyManager moneyManager;
 
     void Awake()
     {

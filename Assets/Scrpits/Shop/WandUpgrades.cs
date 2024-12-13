@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class WandUpgrades : MonoBehaviour
 {
-    [SerializeField]
     public int wand1Cost = 30;
 
     public int wand2Cost = 500;
 
     public void BuyWand1()
     {
-        if(GameManager.Instance.enemy.totalMoney >= wand1Cost)
+        if(GameManager.Instance.totalMoney >= wand1Cost)
         {
-            GameManager.Instance.enemy.totalMoney -= wand1Cost;
+            GameManager.Instance.totalMoney -= wand1Cost;
             GameManager.Instance.playerClick.clickDamage = GameManager.Instance.playerClick.clickDamage * 2;
             wand1Cost = wand1Cost * 2;
             GameManager.Instance.enemy.UpdateMoneyUI();
@@ -24,12 +23,12 @@ public class WandUpgrades : MonoBehaviour
 
     public void BuyWand2()
     {
-        if (GameManager.Instance.enemy.totalMoney >= wand2Cost)
+        if (GameManager.Instance.totalMoney >= wand2Cost)
         {
             if (!GameManager.Instance.playerClick.hasWand2Upgrade)
             {
                 GameManager.Instance.playerClick.hasWand2Upgrade = true;
-                GameManager.Instance.enemy.totalMoney -= wand2Cost;
+                GameManager.Instance.totalMoney -= wand2Cost;
                 GameManager.Instance.playerClick.critMultiplier += 1;
                 wand2Cost = wand2Cost * 2;
                 GameManager.Instance.enemy.UpdateMoneyUI();
@@ -37,7 +36,7 @@ public class WandUpgrades : MonoBehaviour
             }
             else
             {
-                GameManager.Instance.enemy.totalMoney -= wand2Cost;
+                GameManager.Instance.totalMoney -= wand2Cost;
                 GameManager.Instance.playerClick.critMultiplier += 1;
                 wand2Cost = wand2Cost * 2;
                 GameManager.Instance.enemy.UpdateMoneyUI();

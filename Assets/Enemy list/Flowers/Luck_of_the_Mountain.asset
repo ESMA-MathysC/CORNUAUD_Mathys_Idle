@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bd8ee45e371bd14cb37be9454b49c52, type: 3}
-  m_Name: Lava_Crystal
+  m_Name: Luck_of_the_Mountain
   m_EditorClassIdentifier: 
-  ressourceName: Lava Crystal
-  hp: 10
-  type: 2
-  rarity: 4
-  lootAmount: 15
-  ressourceImage: {fileID: 21300000, guid: 52e4a3e18482690448ccff4a592daa04, type: 3}
+  enemyName: Luck of the Mountain
+  hp: 50
+  type: 1
+  rarity: 5
+  lootAmount: 50
+  enemyImage: {fileID: 21300000, guid: c03d0c50144ee264288b8fb163ff9196, type: 3}
