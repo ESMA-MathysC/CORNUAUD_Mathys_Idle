@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public PlayerAttack playerClick;
     public EnemySpawner enemy;
+    public WandUpgrades wandUpgrades;
+    public ShopPrices shopPrices;
 
     void Awake()
     {

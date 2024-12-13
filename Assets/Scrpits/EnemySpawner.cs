@@ -39,6 +39,11 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    public void UpdateMoneyUI()
+    {
+        _moneyText.text = totalMoney.ToString("000");
+    }
+
     //read a new ressource, refreshing every information onscreen about it
     private void ReadRessource(Ressource newRessource)
     {
