@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class MoneyManager : MonoBehaviour
 {
     public int totalMoney = 0;
+    public TextMeshProUGUI moneyText;
+
     public void UpdateMoneyUI()
     {
-        _moneyText.text = totalMoney.ToString("000");
+        moneyText.text = totalMoney.ToString("000");
     }
 }

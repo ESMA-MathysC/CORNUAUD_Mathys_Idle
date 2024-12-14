@@ -30,8 +30,8 @@ public class EnemySpawner : MonoBehaviour
     {
         if (_currentHp <= 0)
         {
-            GameManager.Instance.totalMoney += _currentEnemy.lootAmount; //adds the looting amount of the ressource to the player's money count
-            GameManager.Instance.MoneyManager.UpdateMoneyUI();
+            GameManager.Instance.moneyManager.totalMoney += _currentEnemy.lootAmount; //adds the looting amount of the ressource to the player's money count
+            GameManager.Instance.moneyManager.UpdateMoneyUI();
             ReadEnemy(_enemyTable[Random.Range(0, _enemyTable.Length)]);
         }
     }

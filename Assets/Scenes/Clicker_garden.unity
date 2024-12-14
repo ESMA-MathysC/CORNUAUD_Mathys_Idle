@@ -1952,7 +1952,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 11b0c1d2b1a352f47aefa9f806abb9a4, type: 2}
   - {fileID: 11400000, guid: 090c8234f8776f74f858a8a2ed4f4399, type: 2}
   - {fileID: 11400000, guid: b08ffe471be42284390229ddc9256528, type: 2}
-  totalMoney: 0
 --- !u!114 &447603842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,7 +1968,7 @@ MonoBehaviour:
   enemy: {fileID: 447603841}
   wandUpgrades: {fileID: 50073472}
   shopPrices: {fileID: 865788157}
-  totalMoney: 0
+  moneyManager: {fileID: 865788158}
 --- !u!1 &459660464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,6 +3182,7 @@ GameObject:
   - component: {fileID: 865788154}
   - component: {fileID: 865788156}
   - component: {fileID: 865788157}
+  - component: {fileID: 865788158}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -3254,6 +3254,20 @@ MonoBehaviour:
   _pricePotion1Text: {fileID: 0}
   _pricePotion2Text: {fileID: 0}
   _pricePotion3Text: {fileID: 0}
+--- !u!114 &865788158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865788153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3113953d696c8ae4ba088a6c675794cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalMoney: 0
+  moneyText: {fileID: 1647299407}
 --- !u!1 &874574299
 GameObject:
   m_ObjectHideFlags: 0
