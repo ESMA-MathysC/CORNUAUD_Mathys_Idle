@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wand1Cost: 30
-  wand2Cost: 500
+  wand2Cost: 250
 --- !u!4 &50073473
 Transform:
   m_ObjectHideFlags: 0
@@ -3266,7 +3266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3113953d696c8ae4ba088a6c675794cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalMoney: 0
+  totalMoney: 5000
   moneyText: {fileID: 1647299407}
 --- !u!1 &874574299
 GameObject:

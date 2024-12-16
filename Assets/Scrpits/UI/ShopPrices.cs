@@ -29,19 +29,19 @@ public class ShopPrices : MonoBehaviour
 
     private void Start()
     {
-        UpdatePriceWand1();
-        UpdatePriceWand2();
+        UpdatePriceWand1UI();
+        UpdatePriceWand2UI();
     }
 
 
-    public void UpdatePriceWand1()
+    public void UpdatePriceWand1UI()
     {
-        _priceWand1Text.text = GameManager.Instance.wandUpgrades.wand1Cost.ToString("0000");
+        _priceWand1Text.text = GameManager.Instance.wandUpgrades.wand1Cost.ToString();
     }
 
-    public void UpdatePriceWand2()
+    public void UpdatePriceWand2UI()
     {
-        _priceWand2Text.text = GameManager.Instance.wandUpgrades.wand2Cost.ToString("0000");
+        _priceWand2Text.text = GameManager.Instance.wandUpgrades.wand2Cost.ToString();
     }
 
 }
