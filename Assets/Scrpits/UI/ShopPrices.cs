@@ -31,6 +31,7 @@ public class ShopPrices : MonoBehaviour
     {
         UpdatePriceWand1UI();
         UpdatePriceWand2UI();
+        UpdatePriceWand3UI();
     }
 
 
@@ -42,6 +43,11 @@ public class ShopPrices : MonoBehaviour
     public void UpdatePriceWand2UI()
     {
         _priceWand2Text.text = GameManager.Instance.wandUpgrades.wand2Cost.ToString();
+    }
+
+    public void UpdatePriceWand3UI()
+    {
+        _priceWand3Text.text = GameManager.Instance.wandUpgrades.wand3Cost.ToString();
     }
 
 }

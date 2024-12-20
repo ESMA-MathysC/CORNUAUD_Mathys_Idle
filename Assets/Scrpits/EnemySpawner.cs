@@ -6,50 +6,60 @@ using TMPro;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public int _currentHp;
-    public int _maxHp;
+    public int currentHp;
+    public int maxHp;
     [SerializeField]
-    public TextMeshProUGUI _hpText, _nameText, _typeText, _rarityText, _moneyText;
+    public TextMeshProUGUI hpText, nameText, typeText, rarityText, moneyText;
     [SerializeField]
     private Image _enemyImage;
     [SerializeField]
-    public Image _hpImage;
+    public Image hpImage;
 
     [SerializeField]
     private Enemy _currentEnemy;
 
+    public Animator anim;
+
     [SerializeField]
-    private Enemy[] _enemyTable;
+    private WeightedList<Enemy> _enemyTable;
 
     void Start()
     {
-        ReadEnemy(_enemyTable[Random.Range(0, _enemyTable.Length)]);
+        ReadEnemy(_enemyTable.GetRandomElement());
     }
 
     void Update()
     {
-        if (_currentHp <= 0)
+        if (currentHp == 1)
+        {
+            anim.speed = 2;
+        }
+        if (currentHp <= 0)
         {
             GameManager.Instance.moneyManager.totalMoney += _currentEnemy.lootAmount; //adds the looting amount of the ressource to the player's money count
             GameManager.Instance.moneyManager.UpdateMoneyUI();
-            ReadEnemy(_enemyTable[Random.Range(0, _enemyTable.Length)]);
+            //_enemyTable.GetRandomElement();
+            ReadEnemy(_enemyTable.GetRandomElement());
+            //ReadEnemy(_enemyTable[Random.Range(0, _enemyTable._weightedElementsList.Count)]);
+
         }
     }
 
-    //read a new ressource, refreshing every information onscreen about it
+    //read a new enemy, refreshing every information onscreen about it
     private void ReadEnemy(Enemy newEnemy)
     {
         _currentEnemy = newEnemy;
 
-        _currentHp = _currentEnemy.hp;
-        _maxHp = _currentEnemy.hp;
-        _hpImage.fillAmount = 1;
+        currentHp = _currentEnemy.hp;
+        maxHp = _currentEnemy.hp;
+        hpImage.fillAmount = 1;
 
-
-        _hpText.text = _currentEnemy.hp.ToString("000");
-        _nameText.text = _currentEnemy.enemyName.ToString();
-        _typeText.text = _currentEnemy.type.ToString();
-        _rarityText.text = _currentEnemy.rarity.ToString();
+        hpText.text = _currentEnemy.hp.ToString("000");
+        nameText.text = _currentEnemy.enemyName.ToString();
+        typeText.text = _currentEnemy.type.ToString();
+        rarityText.text = _currentEnemy.rarity.ToString();
+        anim.runtimeAnimatorController = _currentEnemy.animator;
+        anim.speed = 1;
 
         _enemyImage.sprite = _currentEnemy.enemyImage;
     }
