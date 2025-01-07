@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     public Image hpImage;
 
+    public bool hasSpell2Upgrade = false;
+
     [SerializeField]
     private Enemy _currentEnemy;
 
@@ -37,6 +39,10 @@ public class EnemySpawner : MonoBehaviour
         if (currentHp <= 0)
         {
             GameManager.Instance.moneyManager.totalMoney += _currentEnemy.lootAmount; //adds the looting amount of the ressource to the player's money count
+            if (hasSpell2Upgrade)
+            {
+                GameManager.Instance.moneyManager.totalMoney += _currentEnemy.lootAmount / 2;
+            }
             GameManager.Instance.moneyManager.UpdateMoneyUI();
             //_enemyTable.GetRandomElement();
             ReadEnemy(_enemyTable.GetRandomElement());

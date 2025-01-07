@@ -18,6 +18,11 @@ public class PlayerAttack : MonoBehaviour
     public int autoClickDmg;
     public float autoClickDelay;
 
+    //~~~~~~~~~~~~~~~~SPELL 3//~~~~~~~~~~~~~~~~
+    public bool hasSpell3Upgrade = false;
+    public int Spell3Dmg;
+    public int Spell3Delay;
+
     public void OnPlayerClick()
     {
         if(hasWand2Upgrade)
@@ -51,7 +56,12 @@ public class PlayerAttack : MonoBehaviour
         StartCoroutine(AutoClicker());
     }
 
-    IEnumerator AutoClicker()
+    public void StartSpell3()
+    {
+        StartCoroutine(Spell3Attack());
+    }
+
+    public IEnumerator AutoClicker()
     {
         while (hasAutoClicker)
         {
@@ -59,6 +69,17 @@ public class PlayerAttack : MonoBehaviour
             GameManager.Instance.enemy.hpText.text = GameManager.Instance.enemy.currentHp.ToString("000");
             GameManager.Instance.enemy.hpImage.fillAmount = (float)GameManager.Instance.enemy.currentHp / (float)GameManager.Instance.enemy.maxHp;
             yield return new WaitForSeconds(autoClickDelay);
+        }
+    }
+
+    public IEnumerator Spell3Attack()
+    {
+        while (hasSpell3Upgrade)
+        {
+            GameManager.Instance.enemy.currentHp -= Spell3Dmg;
+            GameManager.Instance.enemy.hpText.text = GameManager.Instance.enemy.currentHp.ToString("000");
+            GameManager.Instance.enemy.hpImage.fillAmount = (float)GameManager.Instance.enemy.currentHp / (float)GameManager.Instance.enemy.maxHp;
+            yield return new WaitForSeconds(Spell3Delay);
         }
     }
 }

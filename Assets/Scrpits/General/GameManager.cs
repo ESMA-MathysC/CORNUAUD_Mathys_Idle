@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public PlayerAttack playerClick;
     public EnemySpawner enemy;
     public WandUpgrades wandUpgrades;
+    public SpellsUpgrades spellsUpgrades;
     public ShopPrices shopPrices;
     public MoneyManager moneyManager;
 

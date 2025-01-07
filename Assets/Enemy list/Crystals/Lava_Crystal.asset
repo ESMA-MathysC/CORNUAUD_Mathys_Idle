@@ -16,5 +16,6 @@ MonoBehaviour:
   hp: 15
   type: 2
   rarity: 4
-  lootAmount: 15
+  lootAmount: 20
   enemyImage: {fileID: 21300000, guid: 52e4a3e18482690448ccff4a592daa04, type: 3}
+  animator: {fileID: 0}
