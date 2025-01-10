@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
             GameManager.Instance.moneyManager.totalMoney += _currentEnemy.lootAmount; //adds the looting amount of the ressource to the player's money count
             if (hasSpell2Upgrade)
             {
-                GameManager.Instance.moneyManager.totalMoney += _currentEnemy.lootAmount / 2;
+                GameManager.Instance.moneyManager.totalMoney += _currentEnemy.lootAmount / 2; //add half the loot amount if the player has bought upgrade
             }
             GameManager.Instance.moneyManager.UpdateMoneyUI();
             //_enemyTable.GetRandomElement();
