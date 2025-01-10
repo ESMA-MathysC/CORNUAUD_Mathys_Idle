@@ -18,4 +18,4 @@ MonoBehaviour:
   rarity: 4
   lootAmount: 20
   enemyImage: {fileID: 21300000, guid: 52e4a3e18482690448ccff4a592daa04, type: 3}
-  animator: {fileID: 0}
+  animator: {fileID: 9100000, guid: f747dabc7af757f41b722b96906d22ac, type: 2}

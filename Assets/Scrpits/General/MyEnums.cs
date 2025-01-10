@@ -1,18 +1,18 @@
 public enum EnemyType
 {
-    Herb,
-    Flower,
+    Herbe,
+    Fleur,
     Crystal,
     Fruit,
-    Vegetable,
-    Mushroom,
+    Legume,
+    Champignon,
 }
 public enum Rarity
 {
-    Common,
-    Uncommon,
+    Commun,
+    Atypique,
     Rare,
     Epic,
-    Legendary,
-    Mythic,
+    Legendaire,
+    Mythique,
 }

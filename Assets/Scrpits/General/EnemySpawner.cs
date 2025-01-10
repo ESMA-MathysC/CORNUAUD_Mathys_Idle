@@ -19,7 +19,6 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField]
     private Enemy _currentEnemy;
-
     public Animator anim;
 
     [SerializeField]
